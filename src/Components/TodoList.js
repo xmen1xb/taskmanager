@@ -17,6 +17,9 @@ class Todolist extends Component {
       search: "",
     };
   }
+  /**
+   * Hàm xử lý khi nhập dữ liệu vào để update Task
+   */
   handleChange = (event) => {
     if (
       event.target.name === "duedate" &&
@@ -30,6 +33,9 @@ class Todolist extends Component {
       [event.target.name]: event.target.value,
     });
   };
+  /**
+   * Hàm xử lý xoá Task
+   */
   deleteTask = (id) => {
     console.log(id);
     const listtask = localStorage.getItem("listtask")
@@ -44,6 +50,9 @@ class Todolist extends Component {
       });
     }, 500);
   };
+  /**
+   * Hàm xử lý xoá nhiều Task
+   */
   deleteMultilTask = () => {
     let listdel = this.state.listdel;
     const listtask = localStorage.getItem("listtask")
@@ -64,6 +73,9 @@ class Todolist extends Component {
       });
     }, 500);
   };
+  /**
+   * Hàm xử lý update Task
+   */
   updatetask = (index) => {
     console.log(index);
     const task = {
@@ -85,6 +97,9 @@ class Todolist extends Component {
       });
     }, 500);
   };
+  /**
+   * Hàm xử lý tìm kiếm Task theo Title
+   */
   handleSearch = (e) => {
     const search = this.state.search;
     const listtask = this.state.listtask;
@@ -122,6 +137,9 @@ class Todolist extends Component {
         <div
           className="taskelement"
           key={index}
+          /**
+           * Xử lý tìm kiếm khi search nhập vào là rỗng hoặc những task không nằm trong diện được tìm kiếm sẽ display:none
+           */
           style={{
             display:
               this.state.search === "" || listtaskfilter.includes(row)
@@ -134,6 +152,9 @@ class Todolist extends Component {
               <span>{row.title}</span>
               <input
                 type="checkbox"
+                /**
+                 * Xử lý việc check Task
+                 */
                 checked={
                   this.state.listdel.findIndex(
                     (element) => element.title === row.title
@@ -141,6 +162,9 @@ class Todolist extends Component {
                 }
                 name={"check" + index}
                 value={JSON.stringify(row)}
+                /**
+                 * Hàm xử lý khi nhấn vào nút Checkbox Task
+                 */
                 onChange={(event) => {
                   let listdel = this.state.listdel;
                   if (event.target.checked === true) {
@@ -162,6 +186,9 @@ class Todolist extends Component {
             <span className="taskbuttons">
               <button
                 className="detailbutton"
+                /**
+                 * Xử lý khi nhấn vào nút Detail sẽ hiện ra cửa sổ để Update Task
+                 */
                 onClick={() =>
                   this.state.opentask !== index
                     ? this.setState({
