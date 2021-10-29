@@ -53,7 +53,6 @@ class App extends Component {
           >
             Quick Add Task to Testing
           </button>
-          <p>Please Click then Refresh the Page</p>
         </span>
 
         <Switch>
