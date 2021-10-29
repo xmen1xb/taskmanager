@@ -1,0 +1,209 @@
+.App {
+  margin-top: 0px;
+  margin-inline: 30vw;
+  min-height: 100vh;
+  border: 1px solid black;
+  min-width: 600px;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.bodynewtask {
+  width: 450px;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+}
+.inputnewtask {
+  width: 100%;
+  min-height: 30px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bolder;
+  font-size: smaller;
+}
+.description {
+  max-width: 98.5%;
+  min-width: 98.5%;
+  min-height: 100px;
+  margin-right: 5px;
+}
+.pioritynduedate {
+  margin: 0;
+  position: relative;
+  display: inline-flex;
+
+  width: 100%;
+}
+.duedate {
+  width: 200px;
+}
+.duedate div input {
+  width: 200px;
+  min-height: 30px;
+}
+.piority {
+  position: absolute;
+  right: 0px;
+}
+.piority select {
+  width: 200px;
+  min-height: 34px;
+}
+.piority select option {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  min-height: 30px;
+}
+.addbutton {
+  width: 100%;
+  min-height: 35px;
+  background-color: rgb(47, 138, 47);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  color: white;
+  font-size: medium;
+}
+.todolistbody {
+  width: 450px;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  min-height: 80vh;
+}
+.inputsearch {
+  width: 100%;
+  min-height: 30px;
+  box-sizing: border-box;
+  /* box-shadow: 10px 10px 5px #aaaaaa; */
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  margin-bottom: 20px;
+}
+/**/
+/* Customize the label (the container) */
+.checkboxcontainer {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-block: 15px;
+  margin-left: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxcontainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border: 1px solid black;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxcontainer:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxcontainer input:checked ~ .checkmark {
+  background-color: #ffffff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxcontainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxcontainer .checkmark:after {
+  left: 12px;
+  bottom: 7px;
+  width: 5px;
+  height: 20px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/**/
+.taskelement {
+  position: relative;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+.taskbuttons {
+  position: absolute;
+  top: 13px;
+  right: 0px;
+}
+.taskbuttons button {
+  margin-right: 25px;
+  padding: 0;
+  min-height: 25px;
+  min-width: 70px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.detailbutton {
+  background-color: rgb(86, 101, 190);
+}
+.removebutton {
+  background-color: rgb(233, 25, 25);
+}
+.bulkactionwraper {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background-color: #ccc;
+  border: 2px solid #4caf50;
+}
+.bulkaction {
+}
+.bodyupdatetask {
+  width: 400px;
+  margin: auto;
+  padding: 0;
+  animation: popup 1s;
+  margin-block: 15px;
+}
+@-webkit-keyframes popup {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: (0px, 100px);
+  }
+}
