@@ -4,12 +4,21 @@
   min-height: 100vh;
   border: 1px solid black;
   min-width: 600px;
+  max-width: 700px;
   position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .App {
+    margin-inline: 0;
+  }
 }
 a {
   text-decoration: none;
   color: white;
 }
+/**
+   * Css cho phần tạo Task mới
+   */
 .bodynewtask {
   width: 450px;
   margin: auto;
@@ -82,12 +91,12 @@ label {
   width: 100%;
   min-height: 30px;
   box-sizing: border-box;
-  /* box-shadow: 10px 10px 5px #aaaaaa; */
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+
   margin-bottom: 20px;
 }
-/**/
-/* Customize the label (the container) */
+/**
+   * Css cho nút checkbox
+   */
 .checkboxcontainer {
   display: inline-block;
   position: relative;
@@ -101,8 +110,6 @@ label {
   -ms-user-select: none;
   user-select: none;
 }
-
-/* Hide the browser's default checkbox */
 .checkboxcontainer input {
   position: absolute;
   opacity: 0;
@@ -110,8 +117,6 @@ label {
   height: 0;
   width: 0;
 }
-
-/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
@@ -121,30 +126,20 @@ label {
   background-color: #eee;
   border: 1px solid black;
 }
-
-/* On mouse-over, add a grey background color */
 .checkboxcontainer:hover input ~ .checkmark {
   background-color: #ccc;
 }
-
-/* When the checkbox is checked, add a blue background */
 .checkboxcontainer input:checked ~ .checkmark {
   background-color: #ffffff;
 }
-
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
-/* Show the checkmark when checked */
 .checkboxcontainer input:checked ~ .checkmark:after {
   display: block;
 }
-
-/* Style the checkmark/indicator */
 .checkboxcontainer .checkmark:after {
   left: 12px;
   bottom: 7px;
@@ -156,7 +151,9 @@ label {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/**/
+/**
+   * Css cho các Task trong danh sách
+   */
 .taskelement {
   position: relative;
   border: 1px solid black;
@@ -190,20 +187,41 @@ label {
   background-color: #ccc;
   border: 2px solid #4caf50;
 }
-.bulkaction {
-}
 .bodyupdatetask {
   width: 400px;
   margin: auto;
   padding: 0;
-  animation: popup 1s;
   margin-block: 15px;
 }
-@-webkit-keyframes popup {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  100% {
-    transform: (0px, 100px);
-  }
+.inputupdatetask {
+  width: 100%;
+  min-height: 30px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.pioritynupdateduedate {
+  margin: 0;
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+}
+.duedateupdate {
+  width: 180px;
+}
+.duedateupdate div input {
+  width: 180px;
+  min-height: 30px;
+}
+.piorityupdate {
+  position: absolute;
+  right: 0px;
+}
+.piorityupdate select {
+  width: 180px;
+  min-height: 34px;
+}
+.piorityupdate select option {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  min-height: 30px;
 }

@@ -1,5 +1,5 @@
 import "./App.css";
-import { Switch, Link, Route } from "react-router-dom";
+import { Switch, NavLink, Route } from "react-router-dom";
 import Todolist from "./Components/TodoList";
 import Addtask from "./Components/AddTask";
 import { Component } from "react";
@@ -18,9 +18,9 @@ class App extends Component {
             borderEndEndRadius: "7px",
           }}
         >
-          <Link exact to="/">
+          <NavLink style={{}} exact to="/">
             View List Task
-          </Link>
+          </NavLink>
         </div>
         <div
           style={{
@@ -32,13 +32,20 @@ class App extends Component {
             borderEndStartRadius: "7px",
           }}
         >
-          <Link exact to="/addnewtask">
+          <NavLink exact to="/addnewtask">
             Add New Task
-          </Link>
+          </NavLink>
         </div>
-        <span style={{ position: "absolute", left: "200px", top: "0" }}>
+        <span style={{ position: "absolute", left: "215px", top: "0" }}>
           {" "}
           <button
+            style={{
+              backgroundColor: "red",
+              color: "white",
+              border: "none",
+              height: "20px",
+              borderRadius: "4px",
+            }}
             onClick={() => {
               localStorage.setItem("listtask", JSON.stringify(listtasks));
             }}

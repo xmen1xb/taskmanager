@@ -218,13 +218,15 @@ class Todolist extends Component {
             </span>
           </div>
 
+          {/* Phần Update Task */}
+
           <div
             className="bodyupdatetask"
             style={{ display: this.state.opentask === index ? "" : "none" }}
           >
             <div style={{ position: "relative" }}>
               <input
-                className="inputnewtask"
+                className="inputupdatetask"
                 type="text"
                 name="title"
                 value={this.state.title}
@@ -243,8 +245,8 @@ class Todolist extends Component {
                   onChange={this.handleChange}
                 ></textarea>
               </div>
-              <div className="pioritynduedate">
-                <div className="duedate">
+              <div className="pioritynupdateduedate">
+                <div className="duedateupdate">
                   <p>
                     <label>Due Date</label>
                   </p>
@@ -257,7 +259,7 @@ class Todolist extends Component {
                     />
                   </div>
                 </div>
-                <div className="piority">
+                <div className="piorityupdate">
                   <p>
                     <label>Piority</label>
                   </p>
