@@ -45,6 +45,7 @@ class App extends Component {
               border: "none",
               height: "20px",
               borderRadius: "4px",
+              cursor: "pointer",
             }}
             onClick={() => {
               localStorage.setItem("listtask", JSON.stringify(listtasks));
