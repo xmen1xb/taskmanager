@@ -10,11 +10,17 @@ class Addtask extends Component {
       piority: "normal",
     };
   }
+  /**
+   * Hàm xử lý khi nhập dữ liệu vào
+   */
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
   };
+  /**
+   * Hàm xử lý khi nhấn vào nút Add
+   */
   addNewTask = () => {
     const task = {
       title: this.state.title,
