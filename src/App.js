@@ -49,6 +49,7 @@ class App extends Component {
             }}
             onClick={() => {
               localStorage.setItem("listtask", JSON.stringify(listtasks));
+              alert("Quick add Success,please Refresh the Page !");
             }}
           >
             Quick Add Task to Testing
